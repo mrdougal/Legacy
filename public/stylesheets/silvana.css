@@ -1,0 +1,366 @@
+/* @group html */
+
+body {
+	text-align: left;
+	color: #505050;
+	margin: 0;
+	font: 11pt "Lucida Grande", Lucida, Verdana, sans-serif;
+	padding: 0;
+	background: #fff url(/images/logo.gif) no-repeat fixed right bottom;
+
+}
+
+acronym {
+	border-style: none;
+}
+
+address {
+	font-weight: normal;
+	font-style: normal;
+}
+
+pre {
+	background-color: #ededed;
+	font: 90% "Lucida Grande", Lucida, Verdana, sans-serif;
+	color: #1d1d1a;
+	padding: 5px;
+}
+
+/* @group h* */
+
+h1 {
+	font-weight: normal;
+	font-style: normal;
+	font-size: 200%;
+}
+
+h2 {
+	font-weight: normal;
+	font-style: normal;
+	font-size: 160%;
+}
+
+h3 {
+	font-weight: normal;
+	font-style: normal;
+	font-size: 150%;
+}
+
+h4 {
+	font-weight: normal;
+	font-style: normal;
+	font-size: 110%;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+/* @end */
+
+/* @group links */
+
+a {
+	color: #cc1019;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #ff1520;
+	text-decoration: none;
+}
+
+/* @end */
+
+/* @group forms */
+
+/* @group validation errors */
+
+.fieldWithErrors {
+	padding: 2px;
+	background-color: #cc1019;
+	display: table;
+}
+
+#errorExplanation h2 {
+	color: #cc1019;
+}
+
+#errorExplanation p {
+	color: #cc1019;
+	margin-bottom: 0;
+}
+
+#errorExplanation ul li {
+	color: #cc1019;
+	list-style-type: circle;
+	margin: 0;
+	padding: 0;
+}
+
+/* @end */
+
+label {
+	display: block;
+	padding-bottom: 10px;
+}
+
+label input, label textarea {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+fieldset {
+	padding: 5px;
+	margin: 5px 5px 5px 0;
+	border-style: none;
+}
+
+input.send {
+	cursor: pointer;
+	padding: 5px 10px;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group layout */
+
+/* @group flash */
+
+#flash {
+	margin: 0;
+	display: block;
+	padding: 10px 50px;
+}
+
+#flash.notice {
+	background-color: #d0d0d0;
+	color: #fff;
+	font-size: 14pt;
+}
+
+#flash.error {
+	background-color: #cc1019;
+	color: #fff;
+	font-size: 14pt;
+}
+
+/* @end */
+
+#main {
+	text-align: left;
+	float: left;
+	width: 100%;
+}
+
+/* @group nav */
+
+#fixed {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 13%;
+	padding-top: 60px;
+	margin-bottom: 50px;
+	border-right: 1px dotted #b1b1b1;
+	padding-left: 2%;
+}
+
+#nav {
+	list-style-type: none;
+	font-size: 80%;
+	padding-right: 0;
+	padding-left: 0;
+	margin: 0;
+}
+
+#nav li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#nav li a {
+	display: block;
+	padding: 3px 0 3px 10px;
+	margin: 0;
+}
+
+a.current {
+	background-color: #cc1019;
+	color: #fff;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.wrapper {
+	padding: 10px;
+	font-size: 80%;
+}
+
+/* @group sub_nav */
+
+#sub_nav {
+	float: left;
+	width: 15%;
+	display: block;
+	clear: right;
+	margin-bottom: 50px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-left: 15%;
+}
+
+#sub_nav ul {
+	font-size: 90%;
+	margin: 0;
+	padding: 0;
+}
+
+#sub_nav li {
+	margin: 0;
+	padding: 0 15px 0 0;
+	list-style-type: none;
+}
+
+#links li a {
+	display: block;
+	padding: 3px 0 3px 10px;
+	margin: 0;
+}
+
+li.tag {
+	list-style-image: url(/images/tag.gif);
+	list-style-position: inside;
+}
+
+
+
+
+/* @end */
+
+
+
+
+/* @end */
+
+/* @group tag cloud */
+
+/* @group sizes */
+
+/*.nube1 {
+	font-size: 100%;
+}
+
+.nube2 {
+	font-size: 120%;
+}
+
+.nube3 {
+	font-size: 130%;
+}
+
+.nube4 {
+	font-size: 140%;
+}
+
+.nube5 {
+	font-size: 150%;
+}
+
+.nube6 {
+	font-size: 160%;
+}*/
+
+/* @end */
+
+/*.false {
+	color: #7e7e7e;
+}*/
+
+.true {
+	font-weight: bold;
+	color: #880b11;
+}
+
+/* @end */
+
+#content {
+	float: left;
+	display: block;
+	clear: right;
+	width: 65%;
+	padding-right: 5%;
+	margin-bottom: 50px;
+	padding-top: 30px;
+}
+
+.left {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+img.photo {
+	background-color: #fff;
+	padding: 3px;
+	border: 1px solid #b1b1b1;
+	margin: 3px;
+}
+
+img.photo:hover {
+	background-color: #eee;
+	padding: 3px;
+	border: 1px solid #7e7e7e;
+	margin: 3px;
+}
+
+/* @group pagination */
+
+.pagination {
+	padding: 5px;
+	color: #d2d2d2;
+	font-size: 90%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.pagination a {
+	padding: 5px;
+}
+
+.pagination .current {
+	color: #7e7e7e;
+	font-weight: bold;
+	padding: 5px;
+	border-bottom: 1px solid #7e7e7e;
+}
+
+/* @end */
+
+/* @group related photos */
+
+#related_photos {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#slider {
+	overflow: auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+/* @end */
+
+.admin {
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.note {
+	font: italic 90% Georgia, "Times New Roman", Times, serif;
+}
+
+/* @end */

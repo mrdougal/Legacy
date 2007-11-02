@@ -1,0 +1,20 @@
+<% content_for 'admin_options' do  -%>
+
+
+<strong>Admin options</strong>
+
+<ul>
+
+
+<li><%= link_to 'Logout', logout_path,{
+	:title => 'Log yourself out [q]',
+	:accesskey => 'q',
+	:method => 'post',
+	:confirm => 'You sure you want to logout?'
+} %></li>
+
+</ul>
+
+<% end -%>
+
+<%= content_tag(:div, @content_for_admin_options, {:class => 'admin'}) %>

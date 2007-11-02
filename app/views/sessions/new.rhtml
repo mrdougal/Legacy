@@ -1,0 +1,30 @@
+<% 
+msg = 'Please login&hellip;'
+title msg %>
+
+<h1><%= msg %></h1>
+
+<% form_tag sessions_path do -%>
+
+<label for="login">
+	Your login<br/>
+	<%= text_field_tag 'login' %>
+</label>
+
+
+
+<label for="password">
+	Your password<br/>
+	<%= password_field_tag 'password' %>
+</label>
+
+
+<label for="remember_me" class="note">
+	<%= check_box_tag 'remember_me' %>
+	Automatically log me in next time&hellip;
+</label>
+
+<%= submit_tag 'Log in',{:class => 'send'} %>
+
+
+<% end -%>

@@ -1,0 +1,19 @@
+<% 
+msg = "Showing #{h @user.login}"
+title msg
+ %>
+
+<h1><%= msg %></h1>
+
+
+<ul>
+
+<li>	
+<strong>Name</strong> <%= @user.login %> 
+</li>
+
+<li>
+<strong>Email</strong> <%= mail_to @user.email, @user.email %>
+</li>
+
+</ul>

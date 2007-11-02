@@ -1,0 +1,40 @@
+<% content_for 'admin_options' do  -%>
+
+
+<strong>Admin options</strong>
+
+<ul>
+<%= content_tag :li,(link_to 'Edit this photo', edit_photo_path(@photo),{
+		:title => 'Edit this photo [e]',
+		:accesskey => 'e',
+		:class => 'edit'
+	}) unless @photo.nil? || @photo.id.nil?
+%>
+
+<%= content_tag :li,(link_to 'Delete this photo', photo_path(@photo),{
+		:title => 'Delete this photo',
+		:class => 'destroy',
+		:confirm => "You sure you want to delete this photo? (This can not be undone)",
+		:method => 'delete'
+	}) unless @photo.nil? || @photo.id.nil?
+%>
+
+
+<li><%= link_to 'New Photo', new_photo_path,{
+	:title => 'Create a new photo [n]',
+	:accesskey => 'n',
+	:class => 'new'
+} %></li>
+
+<li><%= link_to 'Logout', logout_path,{
+	:title => 'Log yourself out [q]',
+	:accesskey => 'q',
+	:method => 'post',
+	:confirm => 'You sure you want to logout?'
+} %></li>
+
+</ul>
+
+<% end -%>
+
+<%= content_tag(:div, @content_for_admin_options, {:class => 'admin'}) %>

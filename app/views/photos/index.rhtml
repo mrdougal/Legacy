@@ -1,0 +1,17 @@
+<% 
+msg = 'All my photos' 
+title msg
+%>
+
+<h1><%= msg %></h1>
+
+<%= will_paginate @photos %>
+
+<% for photo in @photos %>
+
+<%= link_to photo_tag(photo, :size => 'thumb'), photo_path(photo),{:title => "View #{photo.title}"} %>
+
+<% end %>
+
+<%= will_paginate @photos %>
+

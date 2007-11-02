@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title><%= yield :title %>Silvana Del Bene Photography</title>
+	<%= stylesheet_link_tag 'silvana' %>
+	
+	<!--[if lte IE 6]>
+	<%= stylesheet_link_tag 'ie_sucks_balls' %>	
+	<![endif]-->
+	
+	<%= javascript_include_tag :defaults %>
+</head>
+<body>
+
+
+
+
+
+
+<div id="main">
+	
+	
+	<div id="fixed">
+		
+		
+		
+	<ul id="nav">
+	<%= render :partial => 'shared/nav' %>
+	<%= render :partial => 'shared/admin_nav' if logged_in? %>
+	</ul>	
+	
+	
+<div class="wrapper">
+	
+	<h3>Silvana Del Bene Photography</h3>
+
+	<acronym title="Australian Business Number">ABN</acronym> 123 456
+
+	<address>
+		70 Fitzroy street<br />
+		Fitzroy Vic 3065<br />
+	</address>
+
+	<p>
+		<a href="http://maps.google.com.au/maps?f=q&hl=en&time=&date=&ttype=&q=70+Fitzroy+St,+Fitzroy+VIC+3065,+Australia&sll=-25.335448,135.745076&sspn=61.262551,135.878906&ie=UTF8&cd=6&geocode=0,-37.806439,144.976136&ll=-37.805766,144.976144&spn=0.006798,0.016587&z=16&iwloc=addr&om=1" title="Get directions via google maps" target="_blank">Get directions&hellip;</a>
+	</p>
+	
+	</div>
+	<!-- end of wrapper -->
+
+	</div>
+	<!-- end of fixed -->
+	
+	<div id="sub_nav">	
+		<%= render :partial => 'subnav' %>
+		<%= render :partial => 'tags' if @tags %>
+	</div>
+	<!-- end of #sub_nav -->
+	
+	
+
+	<!-- The flash!  -->
+	<% flash.each do |key, msg| %>
+		<%= content_tag :div, msg, :id => 'flash', :class => key %>
+	<% end %>
+	<!-- End of The flash! -->	
+
+
+	<div id="content">
+		<%= yield  %>
+		<%= render :partial => 'admin_options' if logged_in? %>
+	</div>
+
+
+</div><!-- end of #main -->
+
+
+</body>
+</html>

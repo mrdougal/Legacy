@@ -1,0 +1,12 @@
+<% 
+msg =  h(@photo.title.humanize)
+title msg
+%>
+
+<h1><%= msg %></h1>
+
+<%= photo_tag(@photo, :size => 'large') %>
+
+<%= @photo.description_html if @photo.description_html %>
+
+<%= render :partial => 'related_photos' unless @related_photos.empty? %>

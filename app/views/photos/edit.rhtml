@@ -1,0 +1,21 @@
+<% 
+msg = "Editing #{h(@photo.title)}"
+title msg %>
+
+
+<h1><%= msg %></h1>
+
+<%= photo_tag(@photo, :size => 'medium') %>
+
+<%= error_messages_for :photo %>
+
+
+<% form_for(:photo, :url => photo_path(@photo), :html => {:multipart => true, :method => :put }) do |f| %>
+
+<%= render :partial => 'form', :locals => {:f => f} %>
+
+  <p>
+    <%= submit_tag "Update photo",{:class => 'send'} %>
+  </p>
+<% end %>
+

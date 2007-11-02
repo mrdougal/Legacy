@@ -1,0 +1,46 @@
+<label for="photo[title]">
+	<strong>Title</strong><br/>
+	<%= f.text_field :title %>
+</label>
+
+
+<label for="photo[description]">
+	<strong>Description</strong><br />
+	<%= f.text_area :description, {:rows => 8} %>
+
+
+<%= link_to_remote 'show help&hellip;', {
+	:update => 'textile_ref', 
+	:url => textile_help_url, 
+	:method => 'get',
+	:complete => visual_effect(:toggle_blind, 'textile_ref', :duration => 0.5)
+ },{
+	:class => 'note',
+	:title => 'View some help on using textile to format your text.',
+	:href => textile_help_url,
+	:target => '_blank' 
+}%>
+
+<div id="textile_ref" style="display: none;"></div>
+</label>
+
+
+<label for="photo[file]">
+	<strong>File</strong><br />
+	<%= f.upload_column_field :file %>
+</label>
+
+
+
+<label for="photo[tags]">
+	<strong>Tags</strong><br />
+	<%= f.text_field :tag_list %>
+	<p class="note">Type out the tags with comma's between the tags. </p>
+</label>
+
+
+<label for="photo[front_page_candidate]">
+<%= f.check_box :front_page_candidate %>
+	<strong>Front page candidate?</strong>
+	<p class="note">Nominate this photo for (possible) display on the homepage.</p>
+</label>
