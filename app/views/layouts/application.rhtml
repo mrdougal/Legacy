@@ -5,7 +5,9 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title><%= yield :title %>Silvana Del Bene Photography</title>
+
 	<%= stylesheet_link_tag 'silvana' %>
+	<%#= stylesheet_link_tag 'homepage' if @controller.name == 'homepage' %>
 	
 	<!--[if lte IE 6]>
 	<%= stylesheet_link_tag 'ie_sucks_balls' %>	
@@ -24,22 +26,16 @@
 	
 	
 	<div id="fixed">
-		
-		
-		
 	<ul id="nav">
 	<%= render :partial => 'shared/nav' %>
 	<%= render :partial => 'shared/admin_nav' if logged_in? %>
 	</ul>	
-	
-
-
 	</div>
 	<!-- end of fixed -->
 	
 	<div id="sub_nav">	
-		<%= render :partial => 'subnav' %>
-		<%= render :partial => 'tags' if @tags %>
+	<%= render :partial => 'subnav' %>
+	<%= render :partial => 'tags' if @tags %>
 	</div>
 	<!-- end of #sub_nav -->
 	
@@ -47,14 +43,14 @@
 
 	<!-- The flash!  -->
 	<% flash.each do |key, msg| %>
-		<%= content_tag :div, msg, :id => 'flash', :class => key %>
+	<%= content_tag :div, msg, :id => 'flash', :class => key %>
 	<% end %>
 	<!-- End of The flash! -->	
 
 
 	<div id="content">
-		<%= yield  %>
-		<%= render :partial => 'admin_options' if logged_in? %>
+	<%= yield  %>
+	<%= render :partial => 'admin_options' if logged_in? %>
 	</div>
 
 

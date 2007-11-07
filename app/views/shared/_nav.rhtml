@@ -1,27 +1,18 @@
-<% content_for 'nav' do  -%>
 
-<%= content_tag :li, (link_to 'Home','/',{
-                          :title => 'Home page', 
-                          :class => my_controller('homepage')
-	})
- %>
+		<%= content_tag :li, (link_to 'Home','/',{
+		                          :title => 'Home page', 
+		                          :class => my_controller('homepage')
+			})
+		 %>
 
-<%= content_tag :li, (link_to 'Photos',photos_path,{
-                          :title => 'Photos', 
-                          :class => my_controller('photos')
-	})
- %>
+		<%= content_tag :li, (link_to 'Photos',photos_path,{
+		                          :title => 'Photos', 
+		                          :class => my_controller('photos')
+			})
+		 %>
 
-<%= content_tag :li,(link_to 'About', about_path,{
-		:title => 'About us',
-		:class => my_controller('about')
-	})
-%>
-
-
-
-
-
-<% end -%>
-
-<%= content_tag(:div, @content_for_nav) %>
+		<%= content_tag :li,(link_to 'About', about_path,{
+				:title => 'About us',
+				:class => my_controller('about')
+			})
+		%>

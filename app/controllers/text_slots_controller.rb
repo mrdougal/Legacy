@@ -1,11 +1,10 @@
 class TextSlotsController < ApplicationController
   
   before_filter :login_required
-  in_place_edit_for :text_slot, :body
+  before_filter :find_text_slot, :only => [:get_message_body, :set_message_body]
+  # in_place_edit_for :text_slot, :body
 
   
-  # GET /text_slots
-  # GET /text_slots.xml
   def index
     @text_slots = TextSlot.find(:all)
 
@@ -15,8 +14,6 @@ class TextSlotsController < ApplicationController
     end
   end
 
-  # GET /text_slots/1
-  # GET /text_slots/1.xml
   def show
     @text_slot = TextSlot.find(params[:id])
 
@@ -26,18 +23,14 @@ class TextSlotsController < ApplicationController
     end
   end
 
-  # GET /text_slots/new
   def new
-    @text_slot = TextSlot.new
+    # Can't just create
   end
 
-  # GET /text_slots/1;edit
   def edit
     @text_slot = TextSlot.find(params[:id])
   end
 
-  # POST /text_slots
-  # POST /text_slots.xml
   def create
     @text_slot = TextSlot.new(params[:text_slot])
 
@@ -53,8 +46,6 @@ class TextSlotsController < ApplicationController
     end
   end
 
-  # PUT /text_slots/1
-  # PUT /text_slots/1.xml
   def update
     @text_slot = TextSlot.find(params[:id])
 
@@ -70,15 +61,30 @@ class TextSlotsController < ApplicationController
     end
   end
 
-  # DELETE /text_slots/1
-  # DELETE /text_slots/1.xml
   def destroy
-    @text_slot = TextSlot.find(params[:id])
-    @text_slot.destroy
-
     respond_to do |format|
       format.html { redirect_to text_slots_url }
       format.xml  { head :ok }
     end
   end
+  
+  
+  def get_message_body
+    render :text => @message.body
+  end
+  
+  def set_message_body
+    # @message = TextSlot.find_by_page('homepage')
+    @message.update_attribute('body',params[:value])
+    @message.save
+    @message.reload
+    render :text => @message.body_html.to_s
+  end
+  
+  private
+  
+  def find_text_slot
+    @message = TextSlot.find(params[:id])
+  end
+  
 end

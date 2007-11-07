@@ -19,4 +19,27 @@ module TextSlotsHelper
       options[:content][:options]
     ) + javascript_tag( script.join("\n") )
   end
+  
+  def inline_slot_editor(message)
+    if logged_in?
+  	editable_content(
+  		:content => {
+  			:element => 'span',
+  			:text => message.body_html,
+  			:options => {
+  				:id => "text_slot#{message.id}",
+  				:class => 'editable-content'
+  			}},
+  		:url => {:controller => 'text_slots',:action => 'set_message_body',:id => message.id
+  		},:ajax => {
+  			:rows => '10',
+  			:okText => "'Update text'",
+  			:cancelText => "'Cancel'", 
+  			:loadTextURL => "'#{ url_for :controller => 'text_slots', :action => 'get_message_body', :id => message.id }'"
+  		})  
+  	else
+  		message.body_html
+  	end
+  end
+  
 end

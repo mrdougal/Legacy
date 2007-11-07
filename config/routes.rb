@@ -5,6 +5,7 @@ ActionController::Routing::Routes.draw do |map|
 	map.resource *%w(help about)
 
   map.resource :help, :collection => {:textile => :get}
+  map.resources :text_slots, :collection => {:get_message_body => :post, :set_message_body => :post}
 
   # The priority is based upon order of creation: first created -> highest priority.
   
@@ -24,8 +25,8 @@ ActionController::Routing::Routes.draw do |map|
 		sessions.logout  'logout', :action => 'destroy'
 	end
 	
-	map.with_options :controller => 'about' do |about|
-	  about.vcard 'vcard', :action => 'vcard'
+  map.with_options :controller => 'about' do |about|
+    about.vcard 'vcard', :action => 'vcard'
   end
 
   # Sample of named route:
