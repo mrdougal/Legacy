@@ -25,7 +25,7 @@ test:
   adapter: mysql
   database: silvana_test
   username: root
-  password:
+  password: such_a_nerd
   socket: /tmp/mysql.sock
 
 production:
