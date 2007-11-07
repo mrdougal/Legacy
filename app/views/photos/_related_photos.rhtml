@@ -6,7 +6,7 @@
 <tr>
 
 <% @related_photos.each do |p| %>
-<td><%= link_to photo_tag(p, :size => 'thumb'), photo_path(p), { :title => p.title }%></td>
+<td><%= link_to photo_tag(p, :size => 'thumb'), photo_path(p), { :title => h(p.title) }%></td>
 <% end %>
 
 </tr>

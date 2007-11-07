@@ -5,9 +5,9 @@
 		<% tag_cloud @tags,@active_tags, %w(nube1 nube2 nube3 nube4 nube5) do |name, count, active, css_class| %>
 
 		<li class="tag">
-			<%= link_to name.downcase, tagged_path(name), {
+			<%= link_to h(name), tagged_path(name), {
 				:class => "#{css_class} #{active}",
-				:title    => "#{pluralize count, 'photo'} tagged #{name}" }%> 
+				:title    => "#{pluralize count, 'photo'} tagged #{h(name)}" }%> 
 
 		</li>
 		<% end %>

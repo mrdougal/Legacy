@@ -1,12 +1,12 @@
 <% 
-msg = "#{pluralize @photos.size, 'photo'} tagged #{params[:id].humanize}"
+msg = "#{pluralize @photos.size, 'photo'} tagged #{h(params[:id]).humanize}"
 title msg
 %>
 <h1><%= msg %></h1>
 
 <% for photo in @photos %>
 
-<%= link_to photo_tag(photo, :size => 'medium'), photo_path(photo),{:title => "View #{photo.title}"} %>
+<%= link_to photo_tag(photo, :size => 'medium'), photo_path(photo),{:title => h(photo.title)} %>
 
 <% end %>
 

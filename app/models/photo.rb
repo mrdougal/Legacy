@@ -18,6 +18,10 @@ class Photo < ActiveRecord::Base
   before_save :generate_html
   after_save :destroy_uploaded_file
   
+  def self.homepage_pic(options={})
+    Photo.find(:first, :conditions => 'front_page_candidate = 1', :order => 'RAND()')
+  end
+  
   private
 
   def generate_html

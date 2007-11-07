@@ -1,7 +1,7 @@
 class PhotosController < ApplicationController
 
-  before_filter :login_required, :except => [:index, :show, :tagged]
-  before_filter :show_all_tags, :except => [:create, :update, :destroy]
+  before_filter :login_required, :except => [:index, :show, :tagged, :homepage]
+  before_filter :show_all_tags, :except => [:create, :update, :destroy, :homepage]
   before_filter :find_photo, :only => [:show, :edit, :update, :destroy]
 
 
@@ -27,6 +27,15 @@ class PhotosController < ApplicationController
     # Find photos that are related to the one that we're viewing
     @related_photos = Photo.find_tagged_with(@photo.tag_list, :conditions => "photos.id <> #{@photo.id}")
   end
+  
+  # This is the page that is called to render the homepage
+  def homepage
+    @photo = Photo.homepage_pic
+    render :layout => 'homepage'
+    
+  end
+  
+  # The CRUD for the photos follows
 
   def new
     @photo = Photo.new
@@ -64,7 +73,7 @@ class PhotosController < ApplicationController
   end
   
   def no_photo
-    
+    # a 404 style page
   end
   
   private
