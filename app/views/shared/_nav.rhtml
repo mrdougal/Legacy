@@ -1,7 +1,10 @@
 <% content_for 'nav' do  -%>
 
-
-
+<%= content_tag :li, (link_to 'Home','/',{
+                          :title => 'Home page', 
+                          :class => my_controller('homepage')
+	})
+ %>
 
 <%= content_tag :li, (link_to 'Photos',photos_path,{
                           :title => 'Photos', 

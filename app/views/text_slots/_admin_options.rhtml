@@ -1,0 +1,35 @@
+<% content_for 'admin_options' do  -%>
+
+
+<strong>Admin options</strong>
+
+<ul>
+<%= content_tag :li,(link_to 'Edit this text slot', edit_text_slot_path(@text_slot),{
+		:title => 'Edit this slot [e]',
+		:accesskey => 'e',
+		:class => 'edit'
+	}) unless @text_slot.nil? || @text_slot.id.nil?
+%>
+
+<%= content_tag :li,(link_to 'Show this text slot', text_slot_path(@text_slot),{
+		:title => 'Show this slot'
+	}) unless @text_slot.nil? || @text_slot.id.nil?
+%>
+
+<li><%= link_to 'Show all', text_slots_path, {
+	:title => 'Show all text slots'
+} %></li>
+
+
+<li><%= link_to 'Logout', logout_path,{
+	:title => 'Log yourself out [q]',
+	:accesskey => 'q',
+	:method => 'post',
+	:confirm => 'You sure you want to logout?'
+} %></li>
+
+</ul>
+
+<% end -%>
+
+<%= content_tag(:div, @content_for_admin_options, {:class => 'admin'}) %>

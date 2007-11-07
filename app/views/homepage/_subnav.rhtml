@@ -1,0 +1,23 @@
+<%= 
+	if logged_in?
+	editable_content(
+		:content => {
+			:element => 'span',
+			:text => @message.body_html,
+			:options => {
+				:id => "text_slot#{@message.id}",
+				:class => 'editable-content'
+			}},
+		:url => {
+			:controller => 'homepage',
+			:action => 'set_message_body'
+		},:ajax => {
+			:rows => '10',
+			:okText => "'Update text'",
+			:cancelText => "'Cancel'", 
+			:loadTextURL => "'#{ url_for :controller => 'homepage', :action => 'get_message_body' }'"
+		})  
+	else
+		@message.body_html
+	end 
+%>

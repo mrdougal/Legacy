@@ -109,6 +109,25 @@ label {
 	padding-bottom: 10px;
 }
 
+/* @group inplaceeditor */
+
+.inplaceeditor-form textarea {
+	width: 100%;
+}
+
+.inplaceeditor-form a {
+	size: 90%;
+}
+
+.inplaceeditor-form .editor_ok_button {
+	width: 100%;
+	cursor: pointer;
+}
+
+
+
+/* @end */
+
 label input, label textarea {
 	margin-top: 5px;
 	margin-bottom: 5px;
@@ -194,9 +213,9 @@ input.send {
 
 a.current {
 	background-color: #cc1019;
-	color: #fff;
 	padding-top: 5px;
 	padding-bottom: 5px;
+	color: #fff;
 }
 
 .wrapper {
@@ -252,38 +271,6 @@ li.tag {
 
 /* @group tag cloud */
 
-/* @group sizes */
-
-/*.nube1 {
-	font-size: 100%;
-}
-
-.nube2 {
-	font-size: 120%;
-}
-
-.nube3 {
-	font-size: 130%;
-}
-
-.nube4 {
-	font-size: 140%;
-}
-
-.nube5 {
-	font-size: 150%;
-}
-
-.nube6 {
-	font-size: 160%;
-}*/
-
-/* @end */
-
-/*.false {
-	color: #7e7e7e;
-}*/
-
 .true {
 	font-weight: bold;
 	color: #880b11;
@@ -295,10 +282,11 @@ li.tag {
 	float: left;
 	display: block;
 	clear: right;
-	width: 65%;
+	width: 63%;
 	padding-right: 5%;
 	margin-bottom: 50px;
 	padding-top: 30px;
+	padding-left: 2%;
 }
 
 .left {
@@ -312,6 +300,14 @@ img.photo {
 	padding: 3px;
 	border: 1px solid #b1b1b1;
 	margin: 3px;
+}
+
+p img {
+	background-color: #fff;
+	padding: 3px;
+	border: 1px solid #b1b1b1;
+	margin: 3px 10px 10px 3px;
+	float: left;
 }
 
 img.photo:hover {
@@ -367,6 +363,7 @@ img.photo:hover {
 	padding: 10px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	clear: both;
 }
 
 .note {

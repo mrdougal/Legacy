@@ -1,8 +1,9 @@
-#fixed {
-	width: 25%;
-}
-
 #sub_nav {
-	width: 5%;
-	margin-left: 25%;
+	float: left;
+	width: 13%;
+	display: block;
+	clear: right;
+	margin-bottom: 50px;
+	margin-left: 15%;
+	padding: 50px 1%;
 }

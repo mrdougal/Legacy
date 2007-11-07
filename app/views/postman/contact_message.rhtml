@@ -1,0 +1,11 @@
+<%= @message.name %> sent you a message...
+
+<%= @message.message %>
+
+
+<%= "Their desired response was #{@message.response}..." unless @message.response.nil? %>
+<%= "Their email address #{@message.email_address}" unless @message.email_address.nil? %>
+
+
+Kind Regards 
+Your website...

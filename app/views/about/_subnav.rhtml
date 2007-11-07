@@ -2,7 +2,9 @@
 <ul id="links">
 	
 	<li>
-		<%= link_to 'Contact me', '/', {:title => 'Get in contact with me via my contact form'} %>
+		<%= link_to 'Contact me', {:action => 'contact'}, {
+			:title => 'Get in contact with me via my contact form',
+			:class => my_page('/about/contact')} %>
 	</li>
 	
 	<li>

@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title><%= yield :title %>home page : Silvana Del Bene Photography</title>
+  <title><%= yield :title %>Silvana Del Bene Photography</title>
 	<%= stylesheet_link_tag 'silvana' %>
 	<%= stylesheet_link_tag 'homepage' %>
 	
@@ -26,10 +26,6 @@
 	
 	<div id="fixed">
 		
-	<h1>Hi, i'm silvana and I take pictures.</h1>
-	<p>Welcome to my website.</p>
-		
-		
 	<ul id="nav">
 	<%= render :partial => 'shared/nav' %>
 	<%= render :partial => 'shared/admin_nav' if logged_in? %>
@@ -42,11 +38,8 @@
 	
 	<div id="sub_nav">	
 		
-		&nbsp;
-		
-		
-		<!-- <%= render :partial => 'subnav' %>
-		<%= render :partial => 'tags' if @tags %> -->
+		<%= render :partial => 'subnav' %>
+
 	</div>
 	<!-- end of #sub_nav -->
 	

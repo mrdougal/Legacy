@@ -60,3 +60,7 @@ end
 	Mime::Type.register "text/x-vcard", :vcf
 
 # Include your application configuration below
+
+WEBSITE_URL = 'silvanadelbenephotography.com'
+MAIN_EMAIL = "silvana@#{WEBSITE_URL}"
+WEBSITE_EMAIL = "website@#{WEBSITE_URL}"

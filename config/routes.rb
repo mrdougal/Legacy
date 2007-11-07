@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
 
 
-	map.resources *%w(sessions users photos)
+	map.resources *%w(sessions users photos text_slots)
 	map.resource *%w(help about)
 
   map.resource :help, :collection => {:textile => :get}
@@ -34,7 +34,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # You can have the root of your site routed by hooking up '' 
   # -- just remember to delete public/index.html.
-  map.connect '', :controller => "photos", :action => 'homepage'
+  map.connect '', :controller => 'homepage'
 
   # Allow downloading Web Service WSDL as a file with an extension
   # instead of a file named 'wsdl'

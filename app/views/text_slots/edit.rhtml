@@ -1,0 +1,19 @@
+<% 
+msg = "Editing #{@text_slot.page}"
+title msg
+ %>
+
+<h1><%= msg %></h1>
+
+<%= error_messages_for :text_slot %>
+
+<% form_for(:text_slot, :url => text_slot_path(@text_slot), :html => { :method => :put }) do |f| %>
+
+<%= render :partial => 'form', :locals => {:f => f} %>
+
+
+  <p>
+    <%= submit_tag "Update", {:class => 'send'} %>
+  </p>
+<% end %>
+

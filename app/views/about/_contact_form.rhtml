@@ -1,0 +1,67 @@
+<% #onload_focus 'contact_name' 
+%>
+
+
+
+
+<!-- contact form -->
+
+<%= error_messages_for :message %>
+
+<% form_for :message do |f| %>
+
+<table>
+	
+<tr>
+<td>
+<label for="contact[name]" class="required">Your name</label>
+</td>
+<td>
+<%= f.text_field :name %>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="contact[email_address]">Email address</label>
+</td>
+<td>
+<%= f.text_field :email_address %>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="contact[response]">Your desired response</label> 
+</td>
+<td>
+<%= f.select :response, Contact::RESPONSE_OPTIONS %>			
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+<label for="contact[message]" class="required">Message</label>
+</td>
+<td>
+<%= f.text_area :message, {:rows => 6} %>
+</td>
+</tr>
+
+<tr>
+<td class="col1">
+&nbsp;
+</td>
+<td>
+<%= submit_tag 'Send message',{:class => 'send'} %>
+</td>
+</tr>
+
+</table>
+
+
+
+<% end %>
+
+
+<!-- end contact form -->

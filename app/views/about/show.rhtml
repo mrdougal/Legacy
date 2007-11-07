@@ -1,4 +1,28 @@
-<h1>Hello there</h1>
+<%= 
+	if logged_in?
+	editable_content(
+		:content => {
+			:element => 'span',
+			:text => @message.body_html,
+			:options => {
+				:id => "text_slot#{@message.id}",
+				:class => 'editable-content'
+			}},
+		:url => {
+			:controller => 'about',
+			:action => 'set_message_body'
+		},:ajax => {
+			:rows => '10',
+			:okText => "'Update text'",
+			:cancelText => "'Cancel'", 
+			:loadTextURL => "'#{ url_for :controller => 'about', :action => 'get_message_body' }'"
+		})  
+	else
+		@message.body_html
+	end 
+%>
+
+<!-- <h1>Hello there</h1>
 
 
 	<span class="left">
@@ -30,4 +54,4 @@ http://mrdougal.com
 
 mobile 0410 423319
 
-
+ -->

@@ -1,0 +1,22 @@
+<% 
+msg = 'Showing all text slots'  
+title msg
+%>
+
+<h1><%= msg %></h1>
+
+
+<ul>
+<% for t in @text_slots %>
+<li>
+
+	<h4><%= t.page.humanize %></h4>
+	<%= truncate(t.body,200) %>
+
+	<p>
+	<%= link_to 'Edit', edit_text_slot_path(t) %>
+	</p>
+</li>
+<% end %>
+
+</ul>  
