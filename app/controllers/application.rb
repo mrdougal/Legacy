@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
     
   include AuthenticatedSystem
   before_filter :login_from_cookie
+  
   session :session_key => '_silvana_session_id'
   
   helper :photos, :text_slots
