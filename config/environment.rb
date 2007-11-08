@@ -64,3 +64,15 @@ end
 WEBSITE_URL = 'silvanadelbenephotography.com'
 MAIN_EMAIL = "silvana@#{WEBSITE_URL}"
 WEBSITE_EMAIL = "website@#{WEBSITE_URL}"
+
+ExceptionNotifier.exception_recipients = %w( error@mrdougal.com.au )
+ExceptionNotifier.sender_address = %("Application Error from " WEBSITE_EMAIL)
+
+ActionMailer::Base.smtp_settings = {
+  :address => "mail.#{WEBSITE_URL}",
+  :port => "25",
+  :domain => "#{WEBSITE_URL}",
+  :user_name => "website@#{WEBSITE_URL}",
+  :password => 'zse4rfv',
+  :authentication => :login
+}
