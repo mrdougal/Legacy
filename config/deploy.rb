@@ -21,6 +21,6 @@ end
 desc  "Set the symlink for the uploaded images"
 task  :symlink_uploaded_images do
   run <<-CMD
-    ln -nfs #{deploy_to}/shared/uploaded/photos #{deploy_to}/current/public/images/photos
+    ln -s #{deploy_to}/shared/uploaded/photos #{deploy_to}/current/public/images/photos
   CMD
 end

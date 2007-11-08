@@ -3,7 +3,8 @@
 html {
 	padding: 0;
 	margin: 0;
-	border-top: 5px solid #b1b1b1;
+	border-top: 5px solid #a6a6a6;
+	background: #eaeae3 url(/images/wallpaper.gif) repeat-x;
 }
 
 body {
@@ -12,8 +13,6 @@ body {
 	margin: 0;
 	font: 11pt "Lucida Grande", Lucida, Verdana, sans-serif;
 	padding: 0;
-	background: #fff url(/images/logo.gif) no-repeat fixed right bottom;
-
 }
 
 acronym {
@@ -176,6 +175,8 @@ input.send {
 	text-align: left;
 	float: left;
 	width: 100%;
+	background: url(/images/logo.gif) no-repeat fixed right bottom;
+
 }
 
 /* @group nav */
@@ -189,6 +190,9 @@ input.send {
 	margin-bottom: 50px;
 	border-right: 1px dotted #b1b1b1;
 	padding-left: 2%;
+	padding-bottom: 50px;
+	border-top: 5px solid #a6a6a6;
+	background: #eaeae3 url(/images/wallpaper.gif) repeat-x;
 }
 
 #nav {
@@ -236,6 +240,10 @@ a.current {
 	margin-left: 15%;
 }
 
+#sub_nav h4 {
+	padding: 3px 0 3px 10px;
+}
+
 #sub_nav ul {
 	font-size: 90%;
 	margin: 0;
@@ -254,11 +262,6 @@ a.current {
 	margin: 0;
 }
 
-li.tag {
-	list-style-image: url(/images/tag.gif);
-	list-style-position: inside;
-}
-
 
 
 
@@ -271,9 +274,18 @@ li.tag {
 
 /* @group tag cloud */
 
+li.tag {
+	list-style-image: url(/images/tag.gif);
+	list-style-position: inside;
+}
+
 .true {
 	font-weight: bold;
 	color: #880b11;
+}
+
+li.tag.true {
+	list-style-image: url(/images/tag-active.gif);
 }
 
 /* @end */
