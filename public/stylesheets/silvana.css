@@ -383,3 +383,43 @@ img.photo:hover {
 }
 
 /* @end */
+
+/* @group tooltip */
+
+.prototip { position: absolute; }
+.prototip .effectWrapper { position: relative; }
+.prototip .tooltip { position: relative; }
+.prototip .toolbar {
+	position: relative;
+	display: block;
+	}
+.prototip .toolbar .title {
+	display: block;
+	position: relative;
+	}
+.prototip .content { clear: both; }
+.prototip .toolbar a.close {
+	position: relative;
+	text-decoration: none;
+	float: right;
+	width: 15px;
+	height: 15px;
+	background: transparent url(close.gif);
+	display: block;
+	line-height: 0;
+	font-size: 0px;
+	border: 0;
+	}
+.prototip .toolbar a.close:hover { background: transparent url(close_hover.gif); }
+
+.iframeShim { 
+	position: absolute;
+	border: 0;
+	margin: 0;	
+    padding: 0;
+    background: none;
+}
+
+
+
+/* @end */
