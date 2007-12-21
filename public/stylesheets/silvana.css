@@ -177,6 +177,10 @@ input.send {
 	background-position: right bottom;
 }
 
+#error_msg {
+	padding: 90px;
+}
+
 /* @group nav */
 
 #fixed {
