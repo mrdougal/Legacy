@@ -1,5 +1,5 @@
 <div id="related_photos" style="width">
-<h4 class="note">Photos that have also been tagged <%= @active_tags.to_sentence %>&hellip;</h4>
+<h4 class="note">Photos that have also been tagged <%= @active_tags.to_sentence(:connector => 'or') %>&hellip;</h4>
 
 <div id="slider">
 <table border="0" cellspacing="0" cellpadding="0">

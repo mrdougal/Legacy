@@ -3,8 +3,7 @@
 html {
 	padding: 0;
 	margin: 0;
-	border-top: 5px solid #a6a6a6;
-	background: #eaeae3 url(/images/wallpaper.gif) repeat-x;
+	background: #fff url(/images/logo.gif) no-repeat fixed right bottom;
 }
 
 body {
@@ -175,8 +174,7 @@ input.send {
 	text-align: left;
 	float: left;
 	width: 100%;
-	background: url(/images/logo.gif) no-repeat fixed right bottom;
-
+	background-position: right bottom;
 }
 
 /* @group nav */
@@ -191,8 +189,7 @@ input.send {
 	border-right: 1px dotted #b1b1b1;
 	padding-left: 2%;
 	padding-bottom: 50px;
-	border-top: 5px solid #a6a6a6;
-	background: #eaeae3 url(/images/wallpaper.gif) repeat-x;
+	background-image: none;
 }
 
 #nav {
@@ -274,9 +271,11 @@ a.current {
 
 /* @group tag cloud */
 
-li.tag {
+#sub_nav li.tag {
 	list-style-image: url(/images/tag.gif);
-	list-style-position: inside;
+	list-style-position: outside;
+	margin-left: 35px;
+	padding-left: 0;
 }
 
 .true {
@@ -284,7 +283,7 @@ li.tag {
 	color: #880b11;
 }
 
-li.tag.true {
+#sub_nav li.tag.true {
 	list-style-image: url(/images/tag-active.gif);
 }
 
@@ -337,7 +336,7 @@ img.photo:hover {
 
 .pagination {
 	padding: 5px;
-	color: #d2d2d2;
+	color: #b1b1b1;
 	font-size: 90%;
 	margin-top: 5px;
 	margin-bottom: 5px;
